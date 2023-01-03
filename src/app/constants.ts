@@ -1,0 +1,1 @@
+export const endaliaLogo: string = '../assets/endalia-logo.png'
