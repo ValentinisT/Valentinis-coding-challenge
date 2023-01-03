@@ -7,17 +7,36 @@
                     <h1>Bienvenido/a</h1>
                     <p>Introduce tus credenciales para acceder</p>
                 </div>
-                <div>
-                    <div class="text-and-input">
-                        <p>Usuario</p>
-                        <p>input usuario</p>
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-flex">
+                    <div class="form-group">
+                        <div style="display: flex; align-items:center">
+                            <div class="input-flex">
+                                <label for="email">Usuario</label>
+                            </div>
+                            <div style="flex:70%">
+                                <input ngbInput type="email" class="form-control full-width"
+                                    placeholder="email@exmple.com" formControlName="email">
+                            </div>
+                        </div>
+                        <small class="form-text text-danger" style="margin-left: 30%;"
+                            [ngStyle]="{'visibility': form.controls.email.invalid && form.controls.email.touched ? 'visible' : 'hidden'}">
+                            Ingresa un email valido </small>
+                        <div style="display: flex; align-items:center; margin-top:.5rem">
+                            <div class="input-flex">
+                                <label for="pass">Contraseña</label>
+                            </div>
+                            <div style="flex:70%">
+                                <input ngbInput type="password" class="form-control full-width" placeholder="Contraseña"
+                                    formControlName="pass">
+                            </div>
+                        </div>
+                        <small class="form-text text-danger" style="margin-left: 30%;"
+                            [ngStyle]="{'visibility': form.controls.pass.invalid && form.controls.pass.touched ? 'visible' : 'hidden'}">
+                            Ingresa una contraseña
+                        </small>
                     </div>
-                    <div class="text-and-input">
-                        <p>contraseña</p>
-                        <p>input contraseña</p>
-                    </div>
-                </div>
-                <button>Acceder</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Acceder</button>
+                </form>
             </div>
         </div>
     </div>
