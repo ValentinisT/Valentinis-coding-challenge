@@ -10,23 +10,19 @@
                 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-flex">
                     <div class="form-group">
                         <div style="display: flex; align-items:center">
-                            <div class="input-flex">
-                                <label for="email">Usuario</label>
-                            </div>
+                            <label style="flex:30%">Usuario</label>
                             <div style="flex:70%">
-                                <input ngbInput type="email" class="form-control full-width"
-                                    placeholder="email@exmple.com" formControlName="email">
+                                <input ngbInput type="email" class="form-control w-100" placeholder="email@example.com"
+                                    formControlName="email">
                             </div>
                         </div>
                         <small class="form-text text-danger" style="margin-left: 30%;"
                             [ngStyle]="{'visibility': form.controls.email.invalid && form.controls.email.touched ? 'visible' : 'hidden'}">
                             Ingresa un email valido </small>
                         <div style="display: flex; align-items:center; margin-top:.5rem">
-                            <div class="input-flex">
-                                <label for="pass">Contraseña</label>
-                            </div>
+                            <label style="flex:30%">Contraseña</label>
                             <div style="flex:70%">
-                                <input ngbInput type="password" class="form-control full-width" placeholder="Contraseña"
+                                <input ngbInput type="password" class="form-control w-100" placeholder="Contraseña"
                                     formControlName="pass">
                             </div>
                         </div>
@@ -35,7 +31,13 @@
                             Ingresa una contraseña
                         </small>
                     </div>
-                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Acceder</button>
+                    <div style="display: flex; flex-direction:column">
+                        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Acceder</button>
+                        <small *ngIf="loginUnsuccesfull$ | async" class="form-text text-danger">
+                            El nombre de usuario o contraseña son incorrectos
+                        </small>
+                    </div>
+
                 </form>
             </div>
         </div>
