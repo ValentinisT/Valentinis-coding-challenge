@@ -8,7 +8,7 @@
                     <p>Introduce tus credenciales para acceder</p>
                 </div>
                 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-flex">
-                    <div class="form-group">
+                    <div>
                         <div style="display: flex; align-items:center">
                             <label style="flex:30%">Usuario</label>
                             <div style="flex:70%">
@@ -18,8 +18,8 @@
                         </div>
                         <small class="form-text text-danger" style="margin-left: 30%;"
                             [ngStyle]="{'visibility': form.controls.email.invalid && form.controls.email.touched ? 'visible' : 'hidden'}">
-                            Ingresa un email valido </small>
-                        <div style="display: flex; align-items:center; margin-top:.5rem">
+                            Ingresa un email válido </small>
+                        <div style="display: flex; align-items:center; margin-top:.25rem">
                             <label style="flex:30%">Contraseña</label>
                             <div style="flex:70%">
                                 <input ngbInput type="password" class="form-control w-100" placeholder="Contraseña"
@@ -31,7 +31,7 @@
                             Ingresa una contraseña
                         </small>
                     </div>
-                    <div style="display: flex; flex-direction:column">
+                    <div style="display: flex; flex-direction:column;margin-bottom: 2rem">
                         <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Acceder</button>
                         <small *ngIf="loginUnsuccesfull$ | async" class="form-text text-danger">
                             El nombre de usuario o contraseña son incorrectos
