@@ -1,1 +1,17 @@
-<p>employees works!</p>
+<div class="employees-container">
+    <h1>Directorio de empleados</h1>
+    <input ngbInput class="form-control filter" placeholder="Buscar..." [(ngModel)]="filter"
+        (ngModelChange)="filterList()">
+    <div class="employee-list-container">
+        <div class="user-container" *ngFor="let employee of (filteredEmployeesList$ | async)">
+            <img class="avatar-logo" src={{employee.profileImage}} alt="">
+            <div style="display: flex; flex-direction:column">
+                <h3 style="font-weight: 700"><span>{{employee.surname | uppercase }}</span>, {{employee.name |
+                    titlecase}}</h3>
+                <p>{{employee.position}}</p>
+                <span style="font-size: .75rem; font-style: italic;">{{employee.telephone}}</span>
+                <span style="font-size: .75rem; font-style: italic;">{{employee.email}}</span>
+            </div>
+        </div>
+    </div>
+</div>

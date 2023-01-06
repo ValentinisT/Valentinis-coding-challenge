@@ -1,0 +1,74 @@
+{
+    "employees": [
+        {
+            "fullName": "doe,jason",
+            "position": "Responsable de Diseño Gráfico",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/2.jpg",
+            "telephone": 13468255,
+            "email": "jason.doe@gmail.com"
+        },
+        {
+            "fullName": "smith,john",
+            "position": "Dirección Comercial",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/4.jpg",
+            "telephone": 40227724,
+            "email": "john.smith@outlook.com"
+        },
+        {
+            "fullName": "jackson,robert",
+            "position": "Administrativo/a",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/5.jpg",
+            "telephone": 6943247,
+            "email": "robert.jackson@yahoo.com"
+        },
+        {
+            "fullName": "brown,holmes Philip",
+            "position": "Operario Sección 2 Turno Tarde",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/6.jpg",
+            "telephone": 22577408,
+            "email": "Philip.brown@hotmail.com"
+        },
+        {
+            "fullName": "miller,Bobby david",
+            "position": "Responsable de Proyecto",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/12.jpg",
+            "telephone": 6926576,
+            "email": "david.miller@gmail.com"
+        },
+        {
+            "fullName": "taylor,Eric Stephen",
+            "position": "Operario Sección 1",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/14.jpg",
+            "telephone": 4363234,
+            "email": "Stephen.taylor@outlook.com"
+        },
+        {
+            "fullName": "moore,Adam michael",
+            "position": "Auditor de Medioambiente / Encargado de Producción",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/15.jpg",
+            "telephone": 49665724,
+            "email": "michael.moore@yahoo.com"
+        },
+        {
+            "fullName": "williams,Leo joffrey",
+            "position": "Auditor de Calidad",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/22.jpg",
+            "telephone": 23328746,
+            "email": "joffrey.williams@hotmail.com"
+        },
+        {
+            "fullName": "jones,matthew",
+            "position": "Coordinador de Ventas Zona Norte",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/36.jpg",
+            "telephone": 69533596,
+            "email": "matthew.jones@gmail.com"
+        },
+        {
+            "fullName": "lee,chris",
+            "position": "Auditor de Medioambiente",
+            "profileImage": "https://xsgames.co/randomusers/assets/avatars/male/45.jpg",
+            "telephone": 25087148,
+            "email": "chris.lee@outlook.com"
+        }
+    ]
+}

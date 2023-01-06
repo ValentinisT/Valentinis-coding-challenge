@@ -1,44 +1,44 @@
 {
     "users": [
         {
-            "username": "jane.doe@gmail.com",
-            "password": "password123"
+            "password": "password123",
+            "username": "jason.doe@gmail.com"
         },
         {
-            "username": "john.smith@outlook.com",
-            "password": "J0hNSm1th"
+            "password": "J0hNSm1th",
+            "username": "john.smith@outlook.com"
         },
         {
-            "username": "robert.jackson@yahoo.com",
-            "password": "R0b3rtJ4cks0n"
+            "password": "R0b3rtJ4cks0n",
+            "username": "robert.jackson@yahoo.com"
         },
         {
-            "username": "lisa.brown@hotmail.com",
-            "password": "L1s4Br0wn"
+            "password": "L1s4Br0wn",
+            "username": "lisa.brown@hotmail.com"
         },
         {
-            "username": "david.miller@gmail.com",
-            "password": "D4v1dM1ll3r"
+            "password": "D4v1dM1ll3r",
+            "username": "david.miller@gmail.com"
         },
         {
-            "username": "sarah.taylor@outlook.com",
-            "password": "S4r4hT4yl0r"
+            "password": "S4r4hT4yl0r",
+            "username": "sarah.taylor@outlook.com"
         },
         {
-            "username": "michael.moore@yahoo.com",
-            "password": "M1ch4elM00r3"
+            "password": "M1ch4elM00r3",
+            "username": "michael.moore@yahoo.com"
         },
         {
-            "username": "jennifer.williams@hotmail.com",
-            "password": "J3nn1f3rW1ll1ams"
+            "password": "J3nn1f3rW1ll1ams",
+            "username": "jennifer.williams@hotmail.com"
         },
         {
-            "username": "matthew.jones@gmail.com",
-            "password": "M4ttJ0n3s"
+            "password": "M4ttJ0n3s",
+            "username": "matthew.jones@gmail.com"
         },
         {
-            "username": "chris.lee@outlook.com",
-            "password": "Chr1sL33"
+            "password": "Chr1sL33",
+            "username": "chris.lee@outlook.com"
         }
     ]
 }

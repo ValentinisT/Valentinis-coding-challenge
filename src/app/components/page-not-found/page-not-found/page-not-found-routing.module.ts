@@ -1,14 +1,13 @@
-import { EmployeesComponent } from './employees.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from 'src/app/guard/can-deactivate-guard';
 
 const routes: Routes = [
-  { path: '', component: EmployeesComponent }
+  { path: '', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EmployeesRoutingModule { }
+export class PageNotFoundRoutingModule { }

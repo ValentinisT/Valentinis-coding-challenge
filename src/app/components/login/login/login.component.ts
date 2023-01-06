@@ -1,8 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { endaliaLogo } from 'src/app/constants';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoginApiService } from './services/login-api.service';
-import { LoginService } from './services/login.service';
+import { LoginService } from '../../../services/login.service';
 import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -10,7 +9,6 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.sass'],
-  providers: [LoginService, LoginApiService],
   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent {
@@ -32,9 +30,6 @@ export class LoginComponent {
   onSubmit() {
     const email = this.form.value.email || '';
     const pass = this.form.value.pass || '';
-    console.log("submited: ", this.form.value)
-    console.log("submited: ", email)
-    console.log("submited: ", pass)
     const credentials = { username: email, password: pass }
     this.loginService.login(credentials).subscribe(loginSuc => {
       return loginSuc ? this.router.navigate(['/employees']) :

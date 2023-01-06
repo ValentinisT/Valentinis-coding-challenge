@@ -1,13 +1,12 @@
-import { endaliaLogo } from 'src/app/constants';
 import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { endaliaLogo } from 'src/app/constants';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
+import { LoginService } from 'src/app/services/login.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginService } from './services/login.service';
-import { LoginApiService } from './services/login-api.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared-module/shared.module';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -17,8 +16,7 @@ describe('LoginComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         CommonModule,
-        FormsModule,
-        HttpClientModule,
+        SharedModule,
         LoginRoutingModule,
         NgbModule,
         ReactiveFormsModule],
@@ -54,29 +52,38 @@ describe('LoginComponent', () => {
     expect(fixture.componentInstance.form.invalid).toBeTrue()
   })
 
+
   it("Form should be invalid when enters username but not the password", () => {
     const fixture = TestBed.createComponent(LoginComponent)
     const email = fixture.componentInstance.form.controls.email.setValue("jane.doe@gmail.com")
     expect(fixture.componentInstance.form.valid).toBeFalse()
   })
 
-  it("Form should be invalid when enters password but not the username", () => {
+  it("Form should be invalid when enters a password but not the username", () => {
     const fixture = TestBed.createComponent(LoginComponent)
     const pass = fixture.componentInstance.form.controls.pass.setValue("password123")
     expect(fixture.componentInstance.form.valid).toBeFalse()
   })
 
-  it("Form should be valid when entered username and password", () => {
+  it("Form should be invalid when enters a password but username is not a valid email", () => {
+    const fixture = TestBed.createComponent(LoginComponent)
+    fixture.componentInstance.form.controls.pass.setValue("password123")
+    fixture.componentInstance.form.controls.email.setValue("jane")
+    expect(fixture.componentInstance.form.valid).toBeFalse()
+    fixture.componentInstance.form.controls.email.setValue("jane.doe")
+    expect(fixture.componentInstance.form.valid).toBeFalse()
+    fixture.componentInstance.form.controls.email.setValue("jane.doe@")
+    expect(fixture.componentInstance.form.valid).toBeFalse()
+    fixture.componentInstance.form.controls.email.setValue("jane.doe@a")
+    expect(fixture.componentInstance.form.valid).toBeFalse()
+    fixture.componentInstance.form.controls.email.setValue("jane.doe@f.c")
+    expect(fixture.componentInstance.form.valid).toBeFalse()
+  })
+
+  it("Form should be valid when enters the correct username format and password", () => {
     const fixture = TestBed.createComponent(LoginComponent)
     const email = fixture.componentInstance.form.controls.email.setValue("jane.doe@gmail.com")
     const pass = fixture.componentInstance.form.controls.pass.setValue("password123")
     expect(fixture.componentInstance.form.valid).toBeTrue()
   })
-
-  // it("Function should return true if login is succesfull", () => {
-  //   const fixture = TestBed.createComponent(LoginComponent)
-  //   const email = fixture.componentInstance.form.controls.email.setValue("jane.doe@gmail.com")
-  //   const pass = fixture.componentInstance.form.controls.pass.setValue("password123")
-  //   fixture.componentInstance.onSubmit()
-  // })
 });

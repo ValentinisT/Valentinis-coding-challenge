@@ -1,0 +1,4 @@
+<nav *ngIf="isLoggedIn$ | async" class="navbar justify-content-between bg-primary" style="padding: 0 1rem 0 1rem">
+    <h4 class="navbar-brand" style="color:#fff; cursor: pointer;">Endalia HR</h4>
+    <i class="bi bi-box-arrow-right" style="color:#fff; cursor: pointer;" (click)="onLogout()"></i>
+</nav>
